@@ -1,0 +1,43 @@
+{
+  "name": "@paulrrdiaz/sensitive-words",
+  "version": "1.0.0",
+  "description": "Filter out a list of sensitive words",
+  "main": "build/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "watch 'npm run build'",
+    "build": "babel src -d build",
+    "test": "jest",
+    "test:watch": "npm t -- --watch",
+    "prepublish": "npm run build"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulrrdiaz/sensitive-words.git"
+  },
+  "keywords": [
+    "filter",
+    "filtering",
+    "sensitive",
+    "words"
+  ],
+  "author": "Paul Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulrrdiaz/sensitive-words/issues"
+  },
+  "homepage": "https://github.com/paulrrdiaz/sensitive-words#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "jest": "^26.6.3",
+    "watch": "^1.0.2"
+  }
+}
